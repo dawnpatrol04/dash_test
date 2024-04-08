@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Chat | Notika - Notika Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dialog/sweetalert2.min.css">
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+
+<body>
+    <div class="notika-chat-list notika-shadow mg-t-0">
+        <div class="realtime-ctn">
+            <div class="realtime-title">
+                <h2>Chat Box</h2>
+            </div>
+        </div>
+        <div class="card-box">
+            <div class="chat-conversation">
+                <div class="widgets-chat-scrollbar">
+                    <ul class="conversation-list">
+                        <!-- Add each chat message here -->
+                    </ul>
+                </div>
+                <div class="chat-widget-input">
+                    <form id="chat-form">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <div class="form-group todo-flex">
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control chat-input" id="message" placeholder="Enter your text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="chat-send">
+                                    <button type="submit" class="btn btn-md btn-primary btn-block notika-chat-btn">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and other JS scripts -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dialog/sweetalert2.min.js"></script>
+    <!-- Include other scripts as needed -->
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Add your custom JavaScript here
+        $(document).ready(function() {
+            // Handle form submission
+            $('#chat-form').submit(function(e) {
+                e.preventDefault();
+                // Get the message input value
+                var message = $('#message').val();
+                // Add your logic to handle the message (e.g., sending it to a server, updating UI, etc.)
+                console.log("Message:", message);
+                // Clear the input field after sending the message
+                $('#message').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>
